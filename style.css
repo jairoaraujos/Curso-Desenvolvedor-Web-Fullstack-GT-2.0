@@ -1,117 +1,96 @@
-/* Estilização no modelo do LinkedIn */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f3f2ef;
-    color: #1d1d1f;
+    color: #333;
 }
 
-/* Cabeçalho */
 header {
-    background-color: #ffffff;
-    color: #0a66c2;
-    padding: 15px 0;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
     width: 100%;
-    z-index: 1000;
+    background-size: 400% 400%;
+    background-image: linear-gradient(-45deg, #0e76a8, #185a7a, #23a6d5, #23d5ab);
+    animation: mygradient 5s ease infinite;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes mygradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff; 
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+}
+
+.profile p {
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: right;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #0a66c2;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #004182;
-}
-
-/* Conteúdo Principal */
-main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-    max-width: 1120px;
-    margin: auto;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
 }
 
 section {
-    max-width: 600px;
     background: white;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
 }
 
-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+h2 {
+    border-bottom: 0.5px solid #ccc;
+    padding-bottom: 5px;
 }
 
-/* Botão Estilizado */
-button.animado {
-    background-color: #0a66c2;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+    padding: 10px;
     border-radius: 25px;
-    transition: background-color 0.3s;
+    border: 1px solid #fff;
 }
 
-button.animado:hover {
-    background-color: #004182;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-button.animado:hover {
-    animation: pulse 0.3s;
-}
-
-/* Barra Lateral */
-aside {
-    max-width: 300px;
-    padding: 15px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-left: 20px;
-}
-
-/* Rodapé */
 footer {
-    background-color: #ffffff;
-    color: #0a66c2;
     text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: #0e76a8;
+    color: white;
     margin-top: 20px;
 }
